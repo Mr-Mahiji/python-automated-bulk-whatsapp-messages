@@ -18,8 +18,8 @@ driver.get("https://web.whatsapp.com/")
 wait = WebDriverWait(driver, 20)
 
 # Read data from excel
-excel_data = pandas.read_excel('Customer bulk email data.xlsx', sheet_name='Customers')
-
+#excel_data = pandas.read_excel('Customer bulk email data.xlsx', sheet_name='Customers')
+excel_data = pandas.read_excel('TESTING.xlsx', sheet_name='Customers'
 # Iterate excel rows till to finish
 for column in excel_data['Name'].tolist():
     # Assign customized message
