@@ -19,7 +19,7 @@ wait = WebDriverWait(driver, 20)
 
 # Read data from excel
 #excel_data = pandas.read_excel('Customer bulk email data.xlsx', sheet_name='Customers')
-excel_data = pandas.read_excel('TESTING.xlsx', sheet_name='Customers'
+excel_data = pandas.read_excel('TESTING.xlsx', sheet_name='Customers')
 # Iterate excel rows till to finish
 for column in excel_data['Name'].tolist():
     # Assign customized message
@@ -37,7 +37,7 @@ for column in excel_data['Name'].tolist():
     count = count + 1
 
     # Wait for 2 seconds to search contact number
-    time.sleep(2)
+    time.sleep(5)
 
     try:
         # Load error message in case unavailability of contact number
