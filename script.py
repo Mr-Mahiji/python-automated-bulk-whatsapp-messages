@@ -2,6 +2,8 @@
 # Author @inforkgodara
 
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
@@ -10,14 +12,20 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 import pandas
 import time
+service = Service(ChromeDriverManager().install())
+
+
+driver = webdriver.Chrome(service=service)
+driver.get("https://web.whatsapp.com/")
+
 
 # Load the chrome driver
-driver = webdriver.Chrome(ChromeDriverManager().install())
+#driver = webdriver.Chrome(ChromeDriverManager().install())
 #driver = webdriver.Chrome()
 count = 0
 
 # Open WhatsApp URL in chrome browser
-driver.get("https://web.whatsapp.com/")
+#driver.get("https://web.whatsapp.com/")
 wait = WebDriverWait(driver, 20)
 
 # Read data from excel
