@@ -15,7 +15,8 @@ import time
 
 # Load Chrome driver
 service = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service)
+driver = webdriver.Chrome(service=Service(ChromeDriverManager(version="142.0.7444.162").install()))
+#driver = webdriver.Chrome(service=service)
 wait = WebDriverWait(driver, 20)
 
 # Open WhatsApp Web
